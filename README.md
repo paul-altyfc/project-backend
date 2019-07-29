@@ -7,4 +7,4 @@ Kotlin code that provides login functionality linking through to firebase authen
 
 # app/google-services.json
 
-Due to the security risks associated with providing API Keys in plain text they have been removed from the file.
+Due to the security risks associated with providing API Keys in plain text they have been removed from the file
