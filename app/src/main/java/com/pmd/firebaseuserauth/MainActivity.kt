@@ -1,11 +1,11 @@
 package com.pmd.firebaseuserauth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-// import com.google.firebase.firestore.auth.User
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             when {
                 it.isSuccessful -> {
                     Toast.makeText(this, "User Login Successful", Toast.LENGTH_LONG).show()
+                    testStorage()
                 }
                 else -> {
                     Toast.makeText(this, "User Login failed", Toast.LENGTH_LONG).show()
@@ -67,6 +68,7 @@ class MainActivity : AppCompatActivity() {
             }
             updateCurrentUser()
             clearInputs()
+
         }
     }
 
@@ -131,6 +133,12 @@ class MainActivity : AppCompatActivity() {
     private fun clearInputs() {
         etEmail.text.clear()
         etPassword.text.clear()
+    }
+
+    private fun testStorage() {
+        val intent = Intent(this, LoadStorage::class.java)
+        // start the Load Storage activity
+        startActivity(intent)
     }
 
 }
