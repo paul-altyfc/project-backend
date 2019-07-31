@@ -9,8 +9,8 @@ android {
     buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "com.pmd.firebaseuserauth"
-        minSdkVersion 21
-        targetSdkVersion 29
+        minSdkVersion 16
+        targetSdkVersion 16
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -32,6 +32,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:17.0.1'
     implementation 'com.google.firebase:firebase-firestore:20.2.0'
     implementation 'com.google.firebase:firebase-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-storage:18.1.1'
+
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
 //    implementation 'com.google.firebase:firebase-core:16.0.9'
 //    implementation 'com.google.firebase:firebase-firestore:17.1.2'
 //    implementation 'com.google.firebase:firebase-auth:16.0.5'
